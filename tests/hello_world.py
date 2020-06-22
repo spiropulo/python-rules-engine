@@ -7,6 +7,9 @@ from tests.sample import SampleOutAction, SampleCondition
 
 class TestHelloWorld(TestCase):
 
+    def test_helloWorld(self):
+        Engine(actions=[SampleOutAction(content="Hello World!")], data=EngineData()).execute()
+
     def test_hello_world_and(self):
         # First set the condition to true so we see Hello World! in the out put.
         actionPass = SampleOutAction("I have a true action condition... Hello World!")
